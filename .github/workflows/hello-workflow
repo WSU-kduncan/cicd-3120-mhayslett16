@@ -1,0 +1,19 @@
+name: Hello-Workflows
+
+on:
+  push:
+    branches: [main]
+
+  workflow-dispatch:
+
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Say Hello
+        run: echo Hello World!
+      - name: Say Goodbye!
+        run: |
+          echo Job finished.
+          echo Goodbye!

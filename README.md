@@ -3,11 +3,11 @@
 # Project Overview  
 For Project 5, we will create a new repository (mostly for organization purposes). The goal of the project will be to use Docker to containerize an application, automate the project pipeline with GitHub Actions, and explore webhooks.  
   
-## Part 1: Dockerize it  
+# Part 1: Dockerize it  
   
 (To be submitted for Milestone Participation on 3/30)  
   
-# Documentation  
+## Documentation  
 Running the project locally:  
 - First off, I created a separate repository for Project5 using the link provided in Pilot. I cloned this repository onto my local machine and established credentials so that I can push and pull between my machine and GitHub.
 - I then installed Docker Desktop onto my local computer. I set it up to be used with WSL2 and Ubuntu, since those are the resources that will be used for this project.  
@@ -27,3 +27,17 @@ Running the project locally:
   
   
 ***Site content and Dockerfile are available under the "website" folder of this repository***
+  
+  
+# Part 2: GitHub Actions and DockerHub  
+  
+Creating a DockerHub Public Repo:  
+- Simply log into your DockerHub account and click the "Create Repository" button under the Repository tab. You can make an unlimited amount of public repo's with a standard account. You can customize their name and description before hitting "create" to finish the process.  
+Allow DockerHub Authentication  via CLI using DockHub Credentials:  
+-
+Configure GitHub Secrets:  
+-
+-
+Configure GitHub Workflow:  
+-
+ 
