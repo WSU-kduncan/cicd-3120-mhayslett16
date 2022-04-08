@@ -5,7 +5,6 @@ For Project 5, we will create a new repository (mostly for organization purposes
   
 # Part 1: Dockerize it  
   
-(To be submitted for Milestone Participation on 3/30)  
   
 ## Documentation  
 Running the project locally:  
@@ -31,13 +30,19 @@ Running the project locally:
   
 # Part 2: GitHub Actions and DockerHub  
   
+  
+(To be submitted for Milestone 2; due 4/7/2022)  
+    
 Creating a DockerHub Public Repo:  
 - Simply log into your DockerHub account and click the "Create Repository" button under the Repository tab. You can make an unlimited amount of public repo's with a standard account. You can customize their name and description before hitting "create" to finish the process.  
 Allow DockerHub Authentication  via CLI using DockHub Credentials:  
--
+- 
 Configure GitHub Secrets:  
--
--
+- Under the "Settings" tab in your repo, select the expand option for "Secrets".
+From these options, select "Actions". In the top right, select "New Repository S
+ecret". Create a secret called "DOCKER_USERNAME" and type your username into the
+ value box. Create another secret called "DOCKER_PASSWORD" and type your passwor
+d into the value box.  
 Configure GitHub Workflow:  
 -
  
