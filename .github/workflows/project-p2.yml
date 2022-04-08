@@ -3,7 +3,7 @@ name: project-part2
 on: [push]
 
 env:
-  DOCKER_REPO: website
+  DOCKER_REPO: project5_repo
 
 jobs:
   docker-build-push:
