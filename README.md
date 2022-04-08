@@ -36,13 +36,12 @@ Running the project locally:
 Creating a DockerHub Public Repo:  
 - Simply log into your DockerHub account and click the "Create Repository" button under the Repository tab. You can make an unlimited amount of public repo's with a standard account. You can customize their name and description before hitting "create" to finish the process.  
 Allow DockerHub Authentication  via CLI using DockHub Credentials:  
-- 
+- To allow for CLI authentication, we'll need to create an access token for our dockerhub repo. Do this by selecting your username in dockerhub and selecting "Account Settings". Scroll down to the "Security" option and click "New Access Token". Give your token a description and select the permissions you'd like to give it before clicking "Generate" at the bottom right. Copy this access token and save it somewhere for later use.  
 Configure GitHub Secrets:  
 - Under the "Settings" tab in your repo, select the expand option for "Secrets".
 From these options, select "Actions". In the top right, select "New Repository S
 ecret". Create a secret called "DOCKER_USERNAME" and type your username into the
- value box. Create another secret called "DOCKER_PASSWORD" and type your passwor
-d into the value box.  
+ value box. Create another secret called "DOCKER_PASSWORD" and type the token we created in the last section into the value box.  
 Configure GitHub Workflow:  
--
- 
+- To configure GitHub Workflow, I mainly followed the walkthrough provided during a few of the class recordings. Looking at the project-p2.yml file created in the /.github/workflows folder, I mostly used the same content and syntax as used in the example. However, the DOCKER_REPO is set to my dockerhub repo's name, and the username and password are connected to the secrets on my personal github account. 
+- Side note: This part of the project gave me a lot of issues and I am stubborn, so I continued to change bit by bit until I got the repo pushed to my dockerhub. I kept getting an error with buildx and failing to compute a cache key. I ended up just copying the contents of the website and Dockerfile created in Part 1 out of the websites folder and onto the main repo folder. I'm sure there was an easier way to fix the issue, but I'm just glad I got to see the checkmark after 15 attempts at it. Is it right? Honestly, I don't know. Rant over. 
