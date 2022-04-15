@@ -55,4 +55,14 @@ Configure GitHub Workflow:
 Container Restart Script:  
 - is the template still being dumb?
   
+Webhook Task Definition File:  
+- Have I fixed the template???  
+  
+Setting up a webhook on the server  
+- This dumb template  
+
+Setting up a notifier in GitHub or Dockerhub  
+- I hope the template works this time :)  
+  
+  
 # Part 4: Diagramming
