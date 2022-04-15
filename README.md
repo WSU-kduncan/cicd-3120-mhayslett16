@@ -30,8 +30,6 @@ Running the project locally:
   
 # Part 2: GitHub Actions and DockerHub  
   
-  
-(To be submitted for Milestone 2; due 4/7/2022)  
     
 Creating a DockerHub Public Repo:  
 - Simply log into your DockerHub account and click the "Create Repository" button under the Repository tab. You can make an unlimited amount of public repo's with a standard account. You can customize their name and description before hitting "create" to finish the process. 
@@ -52,6 +50,7 @@ Configure GitHub Workflow:
   
 # Part 3: Deployment   
   
+(To be submitted for Milestone 3; due 4/20/2022)  
   
 Container Restart Script:  
 - 
