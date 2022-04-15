@@ -53,24 +53,6 @@ Configure GitHub Workflow:
 (To be submitted for Milestone 3; due 4/20/2022)  
   
 Container Restart Script:  
-- 
-  
-Webhook Task Definition File:  
--  
-  
-Setting up a webhook on the server:  
--  
--  
-  
-Setting up a notifier in GitHub or DockerHub  
--   
-  
-  
+- is the template still being dumb?
   
 # Part 4: Diagramming
-  
-  
-- 
-- 
-
-
