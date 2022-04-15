@@ -50,25 +50,28 @@ Configure GitHub Workflow:
 - Side note: This part of the project gave me a lot of issues and I am stubborn, so I continued to change bit by bit until I got the repo pushed to my dockerhub. I kept getting an error with buildx and failing to compute a cache key. I ended up just copying the contents of the website and Dockerfile created in Part 1 out of the websites folder and onto the main repo folder. I'm sure there was an easier way to fix the issue, but I'm just glad I got to see the checkmark after 15 attempts at it. Is it right? Honestly, I don't know. Rant over. 
   
   
-# Part 3: Deployment  
+# Part 3: Deployment   
   
   
 Container Restart Script:  
--
+- 
   
 Webhook Task Definition File:  
-- 
+-  
   
 Setting up a webhook on the server:  
-- 
-- 
+-  
+-  
   
 Setting up a notifier in GitHub or DockerHub  
--  
+-   
   
   
   
 # Part 4: Diagramming
   
-## Documentation  
+  
+- 
+- 
+
 
