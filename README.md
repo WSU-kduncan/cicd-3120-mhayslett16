@@ -58,6 +58,7 @@ Notes:
 Container Restart Script:  
 - The container restart script, "pull-restart.sh" is a bash script that contains the commands to stop the image (cheese in this case) and remove unrunning images on the system. It will then pull the latest version of the image from Dockerhub and run it under the name "cheese".
 - The script can be run using the command "./pull-restart.sh".
+- I tested to make sure this worked by adding a new line to the index.html file and pushing it to GitHub. Once the workflow on GitHub was finished, I came back to my Ubuntu instance and ran the pull-restart.sh script. By going to localhost:8080, I could see that the changes were successfully implemented locally.
   
 Webhook Task Definition File:  
 - Have I fixed the template???  
