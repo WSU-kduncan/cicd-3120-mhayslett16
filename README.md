@@ -56,7 +56,8 @@ Notes:
 - Because I was working with my local Ubuntu setup, I had to connect my GitHub repo and intall Docker onto the EC2 instance. Steps to do this were explained in and can be referenced to in Part 1's documentation.
   
 Container Restart Script:  
-- is the template still being dumb?
+- The container restart script, "pull-restart.sh" is a bash script that contains the commands to stop the image (cheese in this case) and remove unrunning images on the system. It will then pull the latest version of the image from Dockerhub and run it under the name "cheese".
+- The script can be run using the command "./pull-restart.sh".
   
 Webhook Task Definition File:  
 - Have I fixed the template???  
