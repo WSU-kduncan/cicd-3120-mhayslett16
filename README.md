@@ -51,6 +51,9 @@ Configure GitHub Workflow:
 # Part 3: Deployment   
   
 (To be submitted for Milestone 3; due 4/20/2022)  
+
+Setup:  
+- Since I used my local machine for the first few steps of the project, I had to go back through and make changes to my EC2 instance. This was basic steps like connecting my GitHub repo and installing Docker, which were mentioned in and can be referred to in Part 1.
   
 Container Restart Script:  
 - is the template still being dumb?
