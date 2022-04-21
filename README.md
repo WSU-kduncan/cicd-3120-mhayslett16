@@ -90,7 +90,7 @@ n".
 - Going to "52.204.41.89:8080" will display our index.html page 
   
 Setting up a notifier in GitHub or Dockerhub  
-- I didn't get this far :')
+- I created a Webhook on DockerHub and it keeps saying "failure" despite it clearly working and updating. Not sure what's going as of right now.
   
   
 # Part 4: Diagramming
