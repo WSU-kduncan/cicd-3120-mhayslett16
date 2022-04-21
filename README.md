@@ -59,15 +59,35 @@ Container Restart Script:
 - The container restart script, "pull-restart.sh" is a bash script that contains the commands to stop the image (cheese in this case) and remove unrunning images on the system. It will then pull the latest version of the image from Dockerhub and run it under the name "cheese".
 - The script can be run using the command "./pull-restart.sh".
 - I tested to make sure this worked by adding a new line to the index.html file and pushing it to GitHub. Once the workflow on GitHub was finished, I came back to my Ubuntu instance and ran the pull-restart.sh script. By going to localhost:8080, I could see that the changes were successfully implemented locally.
+
+
+## VERY IMPORTANT NOTE:
+***It was around this time that I made a major error-  
+Picture it: My AWS instance was almost at the 4 hour mark so I went to restart it and accidentally reset my AWS lab instead. This is a very terrible thing, especially because the webhook was listening and I was nearly there! I thought I could save it but ended up just watching the AWS lab page spiral in an endless loop of false hope. So, due to time constraints, I'm going to focus on good documentation on what I was able to get done and thank past me for completing the milestones to make up for lost points. Had this happened earlier in the week I may have rebuilt the whole thing and tried to catch up but I am sad and tired so I'm going to take the L on this one. Sorry I'm a failure :')***
   
 Webhook Task Definition File:  
-- Have I fixed the template???  
-  
-Setting up a webhook on the server  
-- This dumb template  
+- First you want to install webhook using sudo apt-get install webhook.  
+- The Webhook definition file is a simple file where we tell our webhook what to do when it's run.  
+- Mine sadly didn't make it to GitHub before the incident, so I recreated a new json file locally.  
+- This particular definition file is called redeploy-webhook. It is written to run the pull-restart.sh script we made previously in this section.  
+- Since the command-working-directory we specified in this file was "/var/webhook", you'll want to make a /var/webhook directory and run the command "webhook -hooks redeploy.json -verbose to see if you were successful. If you are. it will tell you that it's serving hooks on http://0.0.0.0:9000/hooks/{id}.   
 
+Setting up a webhook on the server  
+- This is where I was when I made the biggest oopsie of my whole college career, so it's not as detailed as I would like.  
+- Issues with outbound rules prevented us from communicating over port 9000, so first go to AWS and set a new outbound rule to allow it.  
+- The version of webhook we had installed doesn't have the things we need to run this project properly, so we have to install webhooks with Go. To do this use "wget https://go.dev/dl/go1.18.linux-amd64.tar.gz". This will add a compressed file to your directory. Decompress it with "sudo tar -C /usr/local -xzf go1.18.linux-amd64.tar.gz".
+- You'll then want to add /usr/local/go/bin to the PATH env variable using "export PATH=$PATH:/usr/local/go/bin".  
+- You can make sure go is successfully downloaded by using "go versio
+n".
+- Next we'll install a special version of webhook that will work with Go. DO this with the command "go install github.com/adnanh/webhook@latest".  
+- Next, to make webhook run as a service, we'll need to make another file using the command "sudo touch /etc/systemd/system/webhook.service". Use vim to edit this file to look like the webhook-service-file I included (But don't include the comments).  
+- Then you can enable the service by using "sudo systemctl enable webhook.service". No issues occurred on my attempt so I could start the service using "sudo systemctl start webhook.service".  
+-Before I started mine I ran the command "/home/ubuntu/go/bin/webhook -hooks redeploy.json -verbose" to view the logs, and went to "35.170.220.160:9000/hooks/redeploy" to test to see if my webhook was listening on the port. It returned an error message since this wasn't the full address, but it meant the hook was at least listening.  
+- Going to "35.170.220.160:9000/hooks/redeploy-webhook", which is the correct URL, gave us a blank page.  
+- With more configuration we could've had this page display our html file, but that was as far as I got before things went bad.  
+  
 Setting up a notifier in GitHub or Dockerhub  
-- I hope the template works this time :)  
+- I didn't get this far :')
   
   
 # Part 4: Diagramming

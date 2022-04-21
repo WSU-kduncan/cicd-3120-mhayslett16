@@ -1,0 +1,10 @@
+//This is what the /etc/systemd/system/webhook.service file would look like://
+
+[Unit]
+Description=Webhooks
+
+[Service]
+ExecStart=/home/ubuntu/go/bin/webhook -hooks /home/ubuntu/redeploy.json -hotreload
+
+[Install]
+WantedBy=multi-user.target
