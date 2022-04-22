@@ -90,9 +90,13 @@ n".
 - Going to "52.204.41.89:8080" will display our index.html page 
   
 Setting up a notifier in GitHub or Dockerhub  
-- I created a Webhook on DockerHub and it keeps saying "failure" despite it clearly working and updating. Not sure what's going as of right now.
-  
+- If we want GitHub to notify us when certain actions are taken with our webhook. We can do this by setting up a noitifier on GitHub.  
+- To do this, I went to my GitHub repo for this project and went to Settings. From here, click Webhooks.  
+- I needed to add a payload URL (http://52.204.41.89:9000/hooks/redeploy-webhook), select content type (application/json), type your secret, and select the events you'd like to trigger the webhook (I selected pushes and workflow runs).  
+- This is also nifty ecause you can select when this webhook is active, so you can turn it off without actually deleting it.
+- We also have to update our redeploy.json file. I'll add this in as a separate document and call it "redeploy-with-github".  
+- If done correctly, by querying 52.204.41.89:9000/hooks/redeploy-webhook, we'll receive an error message saying "Hook rules were not satisfied" because the secret wasn't included when the webhook was passed over. This is good because it keeps unauthorized people from triggering your redeployment. Yay!     
   
 # Part 4: Diagramming
-- Here is my lovely workflow diagram for the parts of the project I was able to complete:  
-![Workflow Diagram](https://github.com/WSU-kduncan/cicd-3120-mhayslett16/blob/main/Workflow%20diagram.jpg)  
+- Here is my lovely workflow diagram:  
+![Workflow Diagram](https://github.com/WSU-kduncan/cicd-3120-mhayslett16/blob/main/Workflow%20diagram%20(1).jpg)  

@@ -1,0 +1,23 @@
+
+[
+  {
+    "id": "redeploy-webhook",
+    "execute-command": "/home/ubuntu/pull-restart.sh",
+    "trigger-rule": {
+            "and": [
+                    {
+                    "match": {
+                            "type": "payload-hash-sha1",
+                            "secret": "secretstuff",
+                            "parameter": {
+                                    "source": "header",
+                                    "name": "X-Hub-Signature"
+                                    }
+                            }
+                    }
+
+                    ]
+                    }
+  }
+]
+
