@@ -88,6 +88,9 @@ n".
 -Before I started mine I ran the command "sudo /home/ubuntu/go/bin/webhook -hooks redeploy.json -verbose" to view the logs, and went to "52.204.41.89:9000/hooks/redeploy" to test to see if my webhook was listening on the port. It returned an error message since this wasn't the full address, but it meant the hook was at least listening.  
 - Going to "52.204.41.89:9000/hooks/redeploy-webhook", which is the correct URL, gave us a blank page.  
 - Going to "52.204.41.89:8080" will display our index.html page 
+- Here's a lovely example of our website changing after a successful redeployment:
+![Website Before Change](https://github.com/WSU-kduncan/cicd-3120-mhayslett16/blob/main/deployment-html.JPG)
+![Website After Change](https://github.com/WSU-kduncan/cicd-3120-mhayslett16/blob/main/deployment-html-change.JPG)
   
 Setting up a notifier in GitHub or Dockerhub  
 - If we want GitHub to notify us when certain actions are taken with our webhook. We can do this by setting up a noitifier on GitHub.  
