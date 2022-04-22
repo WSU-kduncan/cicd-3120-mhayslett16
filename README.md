@@ -99,4 +99,4 @@ Setting up a notifier in GitHub or Dockerhub
   
 # Part 4: Diagramming
 - Here is my lovely workflow diagram:  
-![Workflow Diagram](https://github.com/WSU-kduncan/cicd-3120-mhayslett16/blob/main/Workflow%20diagram%20(1).jpg)  
+![Workflow Diagram](https://github.com/WSU-kduncan/cicd-3120-mhayslett16/blob/main/WorkflowDiagram.jpg)  
